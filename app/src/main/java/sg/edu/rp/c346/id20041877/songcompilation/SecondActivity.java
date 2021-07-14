@@ -18,7 +18,7 @@ import java.util.Collections;
 
 public class SecondActivity extends AppCompatActivity {
 
-    Button btnTop;
+    Button btnRefresh;
     ListView lv;
     ArrayList<Song> songsArray;
 
@@ -27,7 +27,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        btnTop = findViewById(R.id.btnRefresh);
+        btnRefresh = findViewById(R.id.btnRefresh);
         lv = findViewById(R.id.lv);
 
         songsArray = new ArrayList<Song>();
