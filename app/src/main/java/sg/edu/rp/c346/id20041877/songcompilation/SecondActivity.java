@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -26,8 +27,8 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
-        btnTop = findViewById(R.id.btnTop);
-        lv = findViewById(R.id.listView);
+        btnTop = findViewById(R.id.btnRefresh);
+        lv = findViewById(R.id.lv);
 
         songsArray = new ArrayList<Song>();
 
@@ -43,12 +44,12 @@ public class SecondActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long identity) {
                 Song data = songsArray.get(position);
                 Intent i = new Intent(SecondActivity.this, ThirdActivity.class);
-                i.putExtra("Song", data);
+                i.putExtra("data", data);
                 startActivity(i);
             }
         });
 
-        btnTop.setOnClickListener(new View.OnClickListener() {
+        btnRefresh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DBHelper dbh = new DBHelper(SecondActivity.this);

@@ -8,13 +8,13 @@
     tools:context=".ThirdActivity">
 
     <Button
-        android:id="@+id/btnTop"
+        android:id="@+id/btnRefresh"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TOP" />
 
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/lv"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
