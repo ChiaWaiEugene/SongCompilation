@@ -42,9 +42,9 @@ public class SecondActivity extends AppCompatActivity {
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long identity) {
-                Song data = songsArray.get(position);
+                Song songs = songsArray.get(position);
                 Intent i = new Intent(SecondActivity.this, ThirdActivity.class);
-                i.putExtra("data", data);
+                i.putExtra("data", songs);
                 startActivity(i);
             }
         });
